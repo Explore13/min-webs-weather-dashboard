@@ -23,10 +23,12 @@ A modern, interactive weather dashboard built with Next.js, TypeScript, and HTML
 
 ### 🗺️ Interactive Map
 
-- **Custom Canvas Rendering**: High-performance map visualization with HTML5 Canvas
-- **Zoom & Pan Controls**: Smooth navigation with 1x to 5x zoom levels
-- **Grid Overlay**: Spatial reference system for better orientation
-- **Responsive Design**: Adapts to different screen sizes
+- **Google Maps Integration**: Powered by Google Maps JavaScript API for accurate mapping
+- **Interactive Controls**: Built-in zoom, pan, and navigation controls
+- **Drawing Manager**: Google Maps Drawing Manager for polygon creation
+- **Real-time Rendering**: Smooth map interactions with optimized performance
+- **Responsive Design**: Adapts to different screen sizes and devices
+- **Custom Styling**: Modern map styling with custom overlays and markers
 
 ### 📐 Polygon Drawing
 
@@ -81,13 +83,29 @@ Ensure you have the following installed:
    pnpm install
    ```
 
-3. **Start development server**
+3. **Configure environment variables**
+
+   Create a `.env.local` file in the root directory and add your Google Maps API key:
+
+   ```bash
+   NEXT_PUBLIC_GOOGLE_MAPS_KEY=your_google_maps_api_key_here
+   ```
+
+   To get a Google Maps API key:
+
+   - Go to the [Google Cloud Console](https://console.cloud.google.com/)
+   - Create a new project or select an existing one
+   - Enable the Maps JavaScript API
+   - Create credentials (API key)
+   - Restrict the API key to your domain for production use
+
+4. **Start development server**
 
    ```bash
    pnpm dev
    ```
 
-4. **Open in browser**
+5. **Open in browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
 ### Build for Production
@@ -156,6 +174,7 @@ pnpm start
 
 ### APIs & Services
 
+- **[Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript)** - Interactive mapping and polygon drawing
 - **[Open-Meteo API](https://open-meteo.com/)** - Weather data provider
 - **Native Fetch** - HTTP client
 
@@ -343,7 +362,6 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 - Use descriptive variable and function names
 - Add JSDoc comments for complex functions
 - Maintain consistent code formatting
-
 
 ## 🙏 Acknowledgments
 

@@ -3,6 +3,8 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 
+import "leaflet/dist/leaflet.css";
+
 export const metadata: Metadata = {
   title: "mind-webs-dashboard",
   description: "Created by Surya",

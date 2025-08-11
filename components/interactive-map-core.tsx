@@ -328,7 +328,7 @@ export function InteractiveMapCore() {
             variant="ghost"
             size="sm"
             onClick={() => {
-              const newZ = Math.min(18, (zoom || 10) + 1);
+              const newZ = Math.min(18, (zoom || 8) + 1);
               setZoom(newZ);
               mapRef.current?.setZoom(newZ);
             }}
@@ -340,7 +340,7 @@ export function InteractiveMapCore() {
             variant="ghost"
             size="sm"
             onClick={() => {
-              const newZ = Math.max(3, (zoom || 10) - 1);
+              const newZ = Math.max(3, (zoom || 8) - 1);
               setZoom(newZ);
               mapRef.current?.setZoom(newZ);
             }}
@@ -354,7 +354,7 @@ export function InteractiveMapCore() {
             onClick={() => {
               resetMapCenter();
               mapRef.current?.setCenter(mapCenter);
-              mapRef.current?.setZoom(10);
+              mapRef.current?.setZoom(8);
             }}
             className="w-10 h-10 p-0 hover:bg-white/40 text-blue-600 rounded-xl"
           >

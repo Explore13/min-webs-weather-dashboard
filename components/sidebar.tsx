@@ -37,10 +37,10 @@ export function Sidebar() {
   };
 
   return (
-    <div className="w-80 relative">
-      <div className="absolute inset-0 backdrop-blur-xl bg-white/20 border-l border-blue-200/30" />
+    <div className="w-full lg:w-80 relative h-full">
+      <div className="absolute inset-0 backdrop-blur-xl bg-white/20 border-t lg:border-t-0 lg:border-l border-blue-200/30" />
 
-      <div className="relative z-10 p-6 h-full overflow-y-auto">
+      <div className="relative z-10 p-4 lg:p-6 h-full overflow-y-auto">
         <div className="space-y-6">
           <div>
             <div className="flex items-center gap-2 mb-4">
@@ -50,30 +50,32 @@ export function Sidebar() {
               </h2>
             </div>
 
-            <Card className="backdrop-blur-sm bg-white/30 border-blue-200/30 shadow-lg">
-              <CardHeader className="pb-3">
-                <CardTitle className="text-sm flex items-center gap-2">
-                  <div className="p-1.5 rounded-lg bg-blue-500">
-                    <Thermometer className="w-3 h-3 text-white" />
-                  </div>
-                  <span className="text-blue-800">Open-Meteo</span>
-                  {isLoadingWeather && (
-                    <Loader2 className="w-3 h-3 animate-spin text-blue-500" />
-                  )}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="pt-0 space-y-2">
-                <Badge
-                  variant="secondary"
-                  className="backdrop-blur-sm bg-white/40 border-blue-200/30 text-blue-700"
-                >
-                  temperature_2m
-                </Badge>
-                <p className="text-xs text-blue-600">
-                  Historical weather data with intelligent fallback
-                </p>
-              </CardContent>
-            </Card>
+            <div>
+              <Card className="backdrop-blur-sm bg-white/30 border-blue-200/30 shadow-lg">
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-sm flex items-center gap-2">
+                    <div className="p-1.5 rounded-lg bg-blue-500">
+                      <Thermometer className="w-3 h-3 text-white" />
+                    </div>
+                    <span className="text-blue-800">Open-Meteo</span>
+                    {isLoadingWeather && (
+                      <Loader2 className="w-3 h-3 animate-spin text-blue-500" />
+                    )}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="pt-0 space-y-2">
+                  <Badge
+                    variant="secondary"
+                    className="backdrop-blur-sm bg-white/40 border-blue-200/30 text-blue-700"
+                  >
+                    temperature_2m
+                  </Badge>
+                  <p className="text-xs text-blue-600">
+                    Historical weather data with intelligent fallback
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
           </div>
 
           <div>

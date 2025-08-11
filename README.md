@@ -323,9 +323,6 @@ Create `.env.local` for local development:
 ```env
 # Optional: Custom API endpoints
 NEXT_PUBLIC_WEATHER_API_URL=https://archive-api.open-meteo.com/v1/archive
-
-# Optional: Analytics
-NEXT_PUBLIC_ANALYTICS_ID=your_analytics_id
 ```
 
 ## 🧪 Testing
